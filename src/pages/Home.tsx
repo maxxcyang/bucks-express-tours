@@ -7,43 +7,38 @@ const Home: React.FC = () => {
     <div className="home">
       <section className="hero">
         <div className="hero-content">
-          <h1>Welcome to BUCKS Express Tours</h1>
-          <p>Experience Washington DC's most iconic landmarks in comfort and style</p>
+          <h1>BUCKS Express Tours</h1>
+          <p>Experience Washington DC in comfort and style</p>
           <Link to="/booking" className="cta-button">Book Your Tour</Link>
         </div>
       </section>
-
+      
       <section className="features">
-        <div className="feature">
-          <h2>Weekend Tours</h2>
-          <p>Join us every weekend for an unforgettable 2-hour golf cart tour</p>
-        </div>
-        <div className="feature">
-          <h2>12 Iconic Stops</h2>
-          <p>Visit the Capitol, Jefferson Memorial, Lincoln Memorial, and more!</p>
-        </div>
-        <div className="feature">
-          <h2>Photo Opportunities</h2>
-          <p>10-15 minutes at each stop for photos and exploration</p>
+        <h2>Why Choose Us?</h2>
+        <div className="feature-grid">
+          <div className="feature">
+            <h3>Comfortable Transportation</h3>
+            <p>Travel in our modern, air-conditioned vehicles</p>
+          </div>
+          <div className="feature">
+            <h3>Expert Guides</h3>
+            <p>Learn from knowledgeable local guides</p>
+          </div>
+          <div className="feature">
+            <h3>Flexible Scheduling</h3>
+            <p>Customize your tour to fit your schedule</p>
+          </div>
+          <div className="feature">
+            <h3>Affordable Prices</h3>
+            <p>Competitive rates for unforgettable experiences</p>
+          </div>
         </div>
       </section>
-
-      <section className="pricing">
-        <h2>Tour Pricing</h2>
-        <div className="pricing-cards">
-          <div className="price-card">
-            <h3>Cherry Blossom Tour</h3>
-            <p className="price">$60</p>
-            <p className="price-sub">$45 for kids</p>
-            <Link to="/booking" className="book-button">Book Now</Link>
-          </div>
-          <div className="price-card">
-            <h3>Private Tour</h3>
-            <p className="price">$80</p>
-            <p className="price-sub">$60 for kids</p>
-            <Link to="/booking" className="book-button">Book Now</Link>
-          </div>
-        </div>
+      
+      <section className="cta">
+        <h2>Ready to Explore DC?</h2>
+        <p>Book your tour today and create memories that last a lifetime</p>
+        <Link to="/booking" className="cta-button">Book Now</Link>
       </section>
     </div>
   );

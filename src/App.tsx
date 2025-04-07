@@ -7,20 +7,22 @@ import Tours from './pages/Tours';
 import Booking from './pages/Booking';
 import './styles/App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/tours" element={<Tours />} />
-          <Route path="/booking" element={<Booking />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/tours" element={<Tours />} />
+            <Route path="/booking" element={<Booking />} />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>
   );
-}
+};
 
 export default App; 

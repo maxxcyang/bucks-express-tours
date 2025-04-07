@@ -13,10 +13,6 @@ const Navbar: React.FC = () => {
         <Link to="/tours">Tours</Link>
         <Link to="/booking">Book Now</Link>
       </div>
-      <div className="navbar-contact">
-        <a href="tel:2407260966">(240) 726-0966</a>
-        <a href="tel:2026993674">(202) 699-3674</a>
-      </div>
     </nav>
   );
 };

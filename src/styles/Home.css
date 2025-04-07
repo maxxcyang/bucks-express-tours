@@ -6,7 +6,7 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/capitol.jpg');
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,67 +16,85 @@
 
 .hero-content {
   max-width: 800px;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 3rem 1rem;
   background-color: #f5f5f5;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feature {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem 1rem;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.pricing {
-  padding: 4rem 2rem;
-  text-align: center;
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.pricing-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 2rem auto;
-}
-
-.price-card {
-  padding: 2rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.price {
-  font-size: 2.5rem;
+.feature h3 {
   color: #1976d2;
-  margin: 1rem 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
-.price-sub {
-  color: #666;
-  margin-bottom: 1rem;
+.feature p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
 }
 
-.book-button {
+.cta {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.cta h2 {
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+}
+
+.cta p {
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
   display: inline-block;
   padding: 12px 24px;
   background-color: #1976d2;
@@ -84,22 +102,33 @@
   border-radius: 4px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
-.book-button:hover {
+.cta-button:hover {
   background-color: #1565c0;
+}
+
+@media (max-width: 992px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
   }
 
-  .features {
+  .feature-grid {
     grid-template-columns: 1fr;
   }
-
-  .pricing-cards {
-    grid-template-columns: 1fr;
+  
+  .features h2 {
+    font-size: 1.8rem;
   }
 } 

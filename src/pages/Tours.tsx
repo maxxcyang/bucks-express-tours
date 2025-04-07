@@ -1,93 +1,90 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Tours.css';
-
-const tourStops = [
-  {
-    name: 'Capitol',
-    description: 'Visit the iconic United States Capitol building'
-  },
-  {
-    name: 'Jefferson Memorial',
-    description: 'Explore the beautiful Jefferson Memorial'
-  },
-  {
-    name: 'Lincoln Memorial',
-    description: 'See the majestic Lincoln Memorial'
-  },
-  {
-    name: 'Washington Monument',
-    description: 'View the iconic Washington Monument'
-  },
-  {
-    name: 'National Mall',
-    description: 'Experience the historic National Mall'
-  },
-  {
-    name: 'Smithsonian Museums',
-    description: 'Pass by the world-famous Smithsonian Museums'
-  },
-  {
-    name: 'White House',
-    description: 'See the White House from the outside'
-  },
-  {
-    name: 'National Archives',
-    description: 'View the National Archives building'
-  },
-  {
-    name: 'National Gallery of Art',
-    description: 'Pass by the National Gallery of Art'
-  },
-  {
-    name: 'National Air and Space Museum',
-    description: 'See the National Air and Space Museum'
-  },
-  {
-    name: 'National Museum of Natural History',
-    description: 'Pass by the National Museum of Natural History'
-  },
-  {
-    name: 'National Museum of American History',
-    description: 'View the National Museum of American History'
-  }
-];
+import capitolImage from '../assets/capitol.jpg';
+import jeffersonImage from '../assets/jefferson.jpg';
+import lincolnImage from '../assets/lincoln.jpg';
+import cherryImage from '../assets/cherry.jpg';
 
 const Tours: React.FC = () => {
+  const tourStops = [
+    {
+      id: 1,
+      name: "U.S. Capitol",
+      description: "Visit the iconic seat of the United States Congress",
+      image: capitolImage
+    },
+    {
+      id: 2,
+      name: "Jefferson Memorial",
+      description: "Explore the beautiful memorial dedicated to Thomas Jefferson",
+      image: jeffersonImage
+    },
+    {
+      id: 3,
+      name: "Lincoln Memorial",
+      description: "See the grand memorial honoring President Abraham Lincoln",
+      image: lincolnImage
+    },
+    {
+      id: 4,
+      name: "Cherry Blossoms",
+      description: "Experience the stunning cherry blossoms during peak season",
+      image: cherryImage
+    }
+  ];
+
   return (
     <div className="tours">
       <section className="tour-hero">
         <h1>Our Tours</h1>
-        <p>Experience Washington DC's most iconic landmarks in comfort and style</p>
+        <p>Explore Washington DC's most iconic landmarks</p>
       </section>
 
-      <section className="tour-details">
-        <div className="tour-info">
-          <h2>Tour Information</h2>
-          <ul>
-            <li>Every weekend</li>
-            <li>2 hours total duration</li>
-            <li>Comfortable golf cart transportation</li>
-            <li>10-15 minutes at each stop for photos and exploration</li>
-            <li>Professional tour guide</li>
-          </ul>
-        </div>
-
-        <div className="tour-stops">
-          <h2>Tour Stops</h2>
-          <div className="stops-grid">
-            {tourStops.map((stop, index) => (
-              <div key={index} className="stop-card">
+      <section className="tour-stops">
+        <h2>Tour Stops</h2>
+        <div className="stops-grid">
+          {tourStops.map(stop => (
+            <div key={stop.id} className="stop-card">
+              <div className="stop-image">
+                <img src={stop.image} alt={stop.name} loading="lazy" />
+              </div>
+              <div className="stop-info">
                 <h3>{stop.name}</h3>
                 <p>{stop.description}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+      </section>
 
-        <div className="tour-cta">
-          <h2>Ready to Book Your Tour?</h2>
-          <Link to="/booking" className="cta-button">Book Now</Link>
+      <section className="pricing">
+        <h2>Tour Pricing</h2>
+        <div className="pricing-cards">
+          <div className="price-card">
+            <h3>Standard Tour</h3>
+            <p className="price">$60</p>
+            <p className="price-sub">$45 for kids</p>
+            <ul>
+              <li>2-hour guided tour</li>
+              <li>12 iconic stops</li>
+              <li>Photo opportunities</li>
+              <li>Expert commentary</li>
+            </ul>
+            <Link to="/booking" className="book-button">Book Now</Link>
+          </div>
+          <div className="price-card featured">
+            <h3>Private Tour</h3>
+            <p className="price">$80</p>
+            <p className="price-sub">$60 for kids</p>
+            <ul>
+              <li>Customizable 2-hour tour</li>
+              <li>Flexible scheduling</li>
+              <li>Exclusive guide</li>
+              <li>Personalized experience</li>
+            </ul>
+            <Link to="/booking" className="book-button">Book Now</Link>
+          </div>
         </div>
       </section>
     </div>
