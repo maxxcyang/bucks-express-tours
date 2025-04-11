@@ -91,12 +91,6 @@ const Booking: React.FC = () => {
     }
   };
 
-  // Function to get the minimum date (today)
-  const getMinDate = (): string => {
-    const today = new Date();
-    return today.toISOString().split('T')[0];
-  };
-
   // Function to get the next weekend date
   const getNextWeekendDate = (): string => {
     const today = new Date();
