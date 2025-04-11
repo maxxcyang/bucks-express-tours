@@ -1,7 +1,8 @@
 # Bucks Express Tours
 Website for Bucks Express Tours, made using React.
 
-[Live Website](bucksexpresstours.com)
+## Demo
+Check out the live site [here](https://yourwebsite.com)!
 
 ### Design Choices
 - React
